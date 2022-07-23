@@ -1,0 +1,7 @@
+com\billing\filetransferhandler\aop\FileStorageServiceAspect.class
+com\billing\filetransferhandler\FileTransferHandlerApplication.class
+com\billing\filetransferhandler\config\SwaggerConfig.class
+com\billing\filetransferhandler\config\KafkaConfiguration.class
+com\billing\filetransferhandler\service\impl\FilesStorageServiceImpl.class
+com\billing\filetransferhandler\service\FileStorageService.class
+com\billing\filetransferhandler\controller\FileController.class

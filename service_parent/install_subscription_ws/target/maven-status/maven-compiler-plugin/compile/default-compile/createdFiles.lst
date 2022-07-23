@@ -1,0 +1,2 @@
+com\billing\subscription\InstallSubscriptionWsApplication.class
+com\billing\subscription\config\KafkaConfiguration.class

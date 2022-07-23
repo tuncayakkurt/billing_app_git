@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="service_common" />
+        <module name="file_transfer_handler" />
+        <module name="install_subscription_ws" />
+        <module name="cdr_rating_handler" />
+        <module name="install_bill_account_ws" />
+        <module name="install_customer_ws" />
+        <module name="get_file_handler" />
+        <module name="cdr_normalization_handler" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="customer_ws" target="17" />
+      <module name="file_transfer-handler" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cdr_normalization_handler" options="-parameters" />
+      <module name="cdr_rating_handler" options="-parameters" />
+      <module name="customer_ws" options="-parameters" />
+      <module name="file_transfer_handler" options="-parameters" />
+      <module name="get_file_handler" options="-parameters" />
+      <module name="install_bill_account_ws" options="-parameters" />
+      <module name="install_customer_ws" options="-parameters" />
+      <module name="install_subscription_ws" options="-parameters" />
+      <module name="service_common" options="-parameters" />
+    </option>
+  </component>
+</project>

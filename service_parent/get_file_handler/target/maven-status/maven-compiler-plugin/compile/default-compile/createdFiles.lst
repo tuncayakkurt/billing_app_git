@@ -1,0 +1,8 @@
+com\billing\getfilehandler\config\SwaggerConfig.class
+com\billing\getfilehandler\service\FileService.class
+com\billing\getfilehandler\config\KafkaConfiguration.class
+com\billing\getfilehandler\GetFileHandlerApplication.class
+com\billing\getfilehandler\controller\FileController.class
+com\billing\getfilehandler\service\FileServiceImpl.class
+com\billing\getfilehandler\parser\TxtParser.class
+com\billing\getfilehandler\parser\Document.class

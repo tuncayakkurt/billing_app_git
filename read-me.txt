@@ -1,0 +1,17 @@
+docker yüklendikten sonra 
+bill_app dizinin altındaki docker-compose.yml dosyasını
+- docker-compose up -d 
+di yerek ayağa kaldırıyoruz. 
+Ardından 
+- InstallCustomerWsApplication    swagger dokümantasyon  -> http://localhost:8033/swagger-ui/index.html
+- InstallBillAccountApplication   api servis yazılmadığı için swagger dokümantasyon oluşturulmadı.
+- GetFileHandlerApplication 	  swagger dokümantasyon  -> http://localhost:8077/swagger-ui/index.html
+- FileTransferHandlerApplication  swagger dokümantasyon  -> http://localhost:8080/swagger-ui/index.html
+projelerimizi ayağa kaldırabiliriz.
+
+
+Kafka Topicler -> Her projenin Kafka Config dosyası içirisinde yaratılamakta.
+
+
+
+

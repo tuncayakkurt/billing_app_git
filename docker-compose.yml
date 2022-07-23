@@ -1,0 +1,54 @@
+version: "3"
+
+services:
+  postgres:
+    image: "postgres:14.3"
+    restart: always
+    container_name: postgres-db
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=123456
+      - GDATA=/data/postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  zookeeper:
+    image: 'bitnami/zookeeper:3.7.1'
+    restart: always
+    ports:
+      - '2181:2181'
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+  kafka:
+    image: 'bitnami/kafka:3.2.0'
+    restart: always
+    ports:
+      - '9092:9092'
+    environment:
+      - KAFKA_BROKER_ID=1
+      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://127.0.0.1:9092
+      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
+      - ALLOW_PLAINTEXT_LISTENER=yes
+    depends_on:
+      - zookeeper
+  mongodb:
+    image: "mongodb:4.4.15"
+    restart: always
+    ports:
+      - '27017:27017'
+    environment:
+      MONGODB_INITRD_ROOT_USERNAME: root
+      MONGODB_INITRD_ROOT_PASSWORD: 123456
+      MONGODB_INITRD_DATABASE: public
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  postgres_data:
+  mongodb_data:
+
+networks:
+  kafka-network:

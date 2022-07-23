@@ -1,0 +1,2 @@
+com\billing\cdrratinghandler\config\KafkaConfiguration.class
+com\billing\cdrratinghandler\CdrRatingHandlerApplication.class

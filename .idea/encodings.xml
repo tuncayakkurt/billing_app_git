@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/service_common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service_common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service_parent/cdr_normalization_handler/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service_parent/cdr_normalization_handler/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service_parent/cdr_rating_handler/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service_parent/cdr_rating_handler/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service_parent/file_transfer_handler/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service_parent/file_transfer_handler/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service_parent/get_file_handler/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service_parent/get_file_handler/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service_parent/install_bill_account_ws/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service_parent/install_bill_account_ws/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service_parent/install_customer_ws/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service_parent/install_subscription_ws/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service_parent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service_parent/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
