@@ -1,6 +1,7 @@
 package com.billing.filetransferhandler.config;
 
 
+import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
@@ -9,10 +10,13 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
+import org.springframework.kafka.config.TopicBuilder;
 import org.springframework.kafka.core.*;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import static com.blg.client.constants.Topics.NORMALIZATION_READ_LINE_CHANNEL;
 
 @Configuration
 public class KafkaConfiguration {
@@ -51,5 +55,13 @@ public class KafkaConfiguration {
         factory.setConsumerFactory(consumerFactory());
 
         return factory;
+    }
+
+    @Bean
+    public NewTopic newTopic() {
+        return TopicBuilder.name(NORMALIZATION_READ_LINE_CHANNEL)
+                .partitions(3)
+                .replicas(1)
+                .build();
     }
 }

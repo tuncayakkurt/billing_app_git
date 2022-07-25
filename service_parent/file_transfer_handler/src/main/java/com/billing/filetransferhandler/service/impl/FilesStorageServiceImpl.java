@@ -1,6 +1,8 @@
 package com.billing.filetransferhandler.service.impl;
 
 import com.billing.filetransferhandler.service.FileStorageService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -13,9 +15,17 @@ import java.nio.file.Paths;
 import java.time.LocalDateTime;
 
 import static com.blg.client.constants.File.FILE_STORAGE_URL;
+import static com.blg.client.constants.Topics.NORMALIZATION_READ_LINE_CHANNEL;
+
 @Service
 public class FilesStorageServiceImpl implements FileStorageService {
     private final Path root = Paths.get(FILE_STORAGE_URL);
+    private KafkaTemplate kafkaTemplate;
+
+    @Autowired
+    public void FileServiceImpl(KafkaTemplate kafkaTemplate) {
+        this.kafkaTemplate = kafkaTemplate;
+    }
 
     @Override
     public String save(MultipartFile file) {
@@ -23,6 +33,8 @@ public class FilesStorageServiceImpl implements FileStorageService {
             while (reader.ready()) {
                 String line = reader.readLine();
                 System.out.println(line);
+                //send topic
+                kafkaTemplate.send(NORMALIZATION_READ_LINE_CHANNEL, line);
             }
             return "";
         } catch (IOException e) {
